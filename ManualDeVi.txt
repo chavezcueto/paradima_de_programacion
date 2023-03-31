@@ -1,0 +1,16 @@
+R-> escribir remplazado 
+i-> escribir insertado 
+esc-> para salir de modo escritura
+x->borrar
+dd->borrar linea entera 
+D-> norrar linea apartir de este
+o-> abrir renglon abajo
+O-> abrir reglon arriba
+:w->guardar
+:wq->guardar y salir
+:q!->salir sin guardar
+:100->ir a linea 100
+:$->ir a ultima linea
+/palabra-> buscar palabra
+n-> buscar siguiente
+N-> buscar anterior 
