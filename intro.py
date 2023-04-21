@@ -68,5 +68,76 @@ elif 5>3: #comienza segundo condicional
     print ("esto no se imprimira")
 else:
     print ("aqui nunca llega")
+#===============
+# Funciones
+#===============
+def say_hello(name):
+    print ("hello ", name)
+    print ("welcome to python Tutorials")
 
+say_hello ("julian")
+
+#=========================================================
+#input permite obtener datos del usuario en prompter
+#=========================================================
+nombre =  input ("dame tu nombre: ")
+print ("Hola como esta" , nombre)
+#=======================================
+# enteros son de precision ilimitada
+#=======================================
+y = 500000000000000000000000000000000000
+print (y)
+
+#======================================================
+#la notacion cientifica de flotantes utiliza e o E
+#======================================================
+# 1.2x10^{-9}
+#=================
+y=1.2E-09
+print(y)
+
+#==========================================================
+# la funcion float() convierte strings y enteros a floats
+#==========================================================
+y = float ("14.3")
+print (y)
+
+#==============================================================
+# Los complejos se escriben con la raiz de menos uno
+# j siempre con un numero como prefija
+# no se acepta j suelta
+#==============================================================
+z= 1+1j
+
+#suma +
+#resta -
+#multiplicaion *
+#division /
+#modulo %
+#exponente **
+#// funcion piso
+# funciones para transformar numeros int() float() complex()
+#operaciones abs() round() pow()
+print(round(3.14159,4))
+
+#===========================================
+# strings de varias lineas
+#===========================================
+parrafo = """En el bosque de la china
+la chinita se perdio"""
+print(parrafo)
+
+#=================================================
+# la funcion len() obtiene el tamaño del string
+#=================================================
+n=len(parrafo)
+print(n)
+
+#==============================================================
+# Las letras en un string ocupan lugares como en un arreglo
+# (tambien de atras para adelante comenzando en -1 el ultimo)
+#==============================================================
+palabra =("hola")
+print(palabra[0])
+print(palabra[-4])
 
