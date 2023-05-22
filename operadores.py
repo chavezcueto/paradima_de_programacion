@@ -40,3 +40,67 @@ print(su)
 si= s1&s2 #interseccion
 print(si)
 
+sr=s1-s2 #diferencia de conjuntos
+print(sr)
+
+sp=s2-s1
+print (sp)
+
+ss=s1^s2 #diferencia simetrica
+print(ss)
+
+#=============================
+# Uso de diccionarios 
+#=============================
+capitals = {"USA":"Washington D.C","France":"paris", "India" : "New Delhi"}
+print (capitals)
+
+#========================
+# llave:valor
+#========================
+#diccionario vacio
+d={}
+
+#llave entera, valor string
+numNames={1:"One", 2:"Two", 3:"Three"}
+
+#llave real, valor string
+decNames={1.5:"One and Half", 2.5:"Two and Half" , 3.5:"Three and half"}
+
+#llave tupla, valor string
+items={("parker","reynolds","camlin"):"pen",("Lg","Whirlpool","Samsung"):"Refrigerator"}
+
+#llave string, valor int
+romanNums = {'I':1 , 'II':2 , 'III':3 , 'IV':4 ,'V':5}
+
+print (romanNums)
+print (romanNums["I"])
+
+print (capitals.get("India"))
+print (capitals.get("india"))
+
+#reportar llave y valor
+for k in capitals:
+    print("key= "+k+",Value= " + capitals[k])
+
+#Nuevo dato para el diccionario 
+capitals ["Mexico"] = "CDMX"
+print (capitals)
+
+#BOrrar dato del diccionario 
+del capitals ["Mexico"]
+
+#Borrar todo el diccionario 
+del capitals
+
+#Reportar llaves
+print (romanNums.keys ())
+
+#reportar valores
+print(romanNums.values())
+
+#juicio de llave (esta o no esta la llave en el diccionario)
+print("I" in romanNums)
+print("X" in romanNums)
+print("XX" not in romanNums)
+
