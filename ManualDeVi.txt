@@ -1,16 +1,59 @@
-R-> escribir remplazado 
-i-> escribir insertado 
-esc-> para salir de modo escritura
-x->borrar
-dd->borrar linea entera 
-D-> norrar linea apartir de este
-o-> abrir renglon abajo
-O-> abrir reglon arriba
-:w->guardar
-:wq->guardar y salir
-:q!->salir sin guardar
-:100->ir a linea 100
-:$->ir a ultima linea
-/palabra-> buscar palabra
-n-> buscar siguiente
-N-> buscar anterior 
+#==============================
+# Chavez Cueto Jaretzy Yajahira
+#==============================
+# Matemática Algorítmica
+# Paradigmas de Programación
+# ESFM IPN   Septiembre 2023
+#==============================
+
+#================
+# Manual de vi
+#===============
+R -> escribir remplazado 
+i -> escribir insertado 
+esc -> para salir de modo escritura
+x -> borrar
+dd ->borrar linea entera 
+D -> borrar linea apartir de este lugar
+o -> abrir renglón abajo
+O -> abrir renglón arriba
+:w -> guardar
+:wq -> guardar y salir
+:q! -> salir sin guardar
+:100 -> ir a linea 100
+:$ -> ir a ultima linea
+/palabra -> buscar palabra
+n -> buscar siguiente
+N -> buscar anterior 
+
+#===================
+#  Manual de UNIX
+#===================
+ls -> (list) muestra lo que hay en la carpeta
+cd nombre_del_directorio -> (change directory) cambiar de carpeta
+cd .. -> bajar a la carpeta anterior
+cd -> ir a la carpeta principal
+rm nombre_de_archivo -> (remove) borra el archivo
+rm -r nombre_de_la_carpeta -> borra toda la carpeta
+mkdir nombre_de_la_carpeta -> (make directory) hacer una carpeta
+cp archivo dirección_y_nuevo_nombre -> (copy) copiar archivos
+mv archivo dirección_y_nuevo_nombre -> (move) copia y borra el archivo
+pwd -> (present working directory) donde estoy en el árbol de carpetas
+vi archivo -> abrir archivo de texto 
+
+#=================
+#  Manual de git
+#=================
+git clone https://github.com/chavezcueto/paradima_de_programacion.git
+--- trabajas los archivos ----
+git add . 
+git commit -m "nombre_del_archivo"
+git push
+
+#================
+# Configurar git 
+#================
+git config --global user.name "chavezcueto"
+git config --global user.email jare1852@gmail.com
+
+
