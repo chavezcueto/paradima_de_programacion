@@ -1,0 +1,17 @@
+#==============================
+# Chavez Cueto Jaretzy Yajahira
+#==============================
+# Matematica Algoritmica
+# Paradigmas de programacion
+# ESFM IPN Septiembre 20023
+#==============================
+
+#===========
+#funciones
+#===========
+
+==== Mi primera funcion====
+
+def saludo():
+	#-------------------------------
+	#
