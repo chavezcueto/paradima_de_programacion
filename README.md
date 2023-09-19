@@ -1,1 +1,1 @@
-# paradima_de_programacion
+# paradigmas_de_programacion
