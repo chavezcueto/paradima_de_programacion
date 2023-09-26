@@ -58,16 +58,65 @@ saludos_multiples("Hugo","Paco","luis")
 
 #==== funcion con cualquier numero de argumentos ====
 
-def muchos_saludos (*nombre):
+def muchos_saludos (*nombres):
     """esta funcion saluda a todos los que quieras"""
     i = 0
     #==== end= es para ponerlo de corrido ====
     print("Hola ", end="")
-    while len(nombre) > i:
+    while len(nombres) > i:
         #ultimo nombre
         if (i==len(nombres)-1):
             print(nombres[i])
         else:
             #cualquier otro nombre
-            print(nombre[i], end=", ")
+            print(nombres[i], end=", ")
         i+=1
+muchos_saludos("bosco","angel","david","tamara","mili","edwin","lav","luis","abigail")
+def greet(firstname, lastname):
+    print("hello", firstname, lastname)
+#==== llamar la funcion con argumentos en desorden ====
+greet(lastname="jobs", firstname="stave")
+
+#==== funcion con argumentos escondidos ====
+def greet(**person):
+    #==== persona tiene caracteristicas firstname y lastname ====
+    print( "hello", person["firstname"], person["lastname"])
+
+greet (firstname="steve", lastname="hobs")
+greet (firstname="jobs", lastname="gates", age=55) # se pueden pasar mas parametros de los necesarios
+
+#====funcion con valoeres por defecto====
+def greet(name="guest"):
+    print("hello", name)
+
+greet () # utiliza el valor dado de antemano 
+greet("steve")
+
+#==== funcion cpn resultado ====
+def suma(a,b):
+    return a+b
+
+#==== programacion funcional ====
+#==== se puede usar funciones dentro de funciones ====
+
+total=suma(5, suma(10,20))
+print(total)
+
+#==== calculo lambda ====
+#==== nombre de la funcion = lambda variable: funcion ====
+x_al_cuadrado = lambda x : x * x
+a1 = x_al_cuadrado(5)
+print(a1)
+
+#==== lambda de varias variables ====
+
+suma = lambda x1 , x2, x3: x1+x2+x3
+print(suma(99,98,97))
+
+sumas = lambda *x: x[0]+x[1]+x[2]+x[3]
+print(sumas(100,200,300,400))
+
+#==== uso de una funcion anonima====
+#==== el argumento va afuera entre parentesis ====
+print ((lambda x: x*x)(6)) #funcion anonima
+
