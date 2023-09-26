@@ -50,3 +50,24 @@ a=123
 print(type(a))
 salu2(a)
 
+#==== funcion con muchos argumentos====
+def saludos_multiples(nombre1,nombre2,nombre3):
+     """esta funcion saluda a tres personas al mismo tiempo"""
+     print("Hola ",nombre1, ",",nombre2, "y", nombre3)
+saludos_multiples("Hugo","Paco","luis")
+
+#==== funcion con cualquier numero de argumentos ====
+
+def muchos_saludos (*nombre):
+    """esta funcion saluda a todos los que quieras"""
+    i = 0
+    #==== end= es para ponerlo de corrido ====
+    print("Hola ", end="")
+    while len(nombre) > i:
+        #ultimo nombre
+        if (i==len(nombres)-1):
+            print(nombres[i])
+        else:
+            #cualquier otro nombre
+            print(nombre[i], end=", ")
+        i+=1
