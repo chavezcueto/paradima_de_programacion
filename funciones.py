@@ -120,3 +120,12 @@ print(sumas(100,200,300,400))
 #==== el argumento va afuera entre parentesis ====
 print ((lambda x: x*x)(6)) #funcion anonima
 
+
+#====fucion con variable global ====
+#====EVITE EL EXCESO!!!====
+name = "Steve"
+def greet():
+     global name #para utilizar una variable global (que viene de fuera del bloq#ue)
+name = "bill"
+print("hello", name)
+greet()
