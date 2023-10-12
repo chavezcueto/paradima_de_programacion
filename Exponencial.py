@@ -20,9 +20,9 @@ def exponencial(n:int=150,x:float=1.0):
     exponencial_de_x = 1.0
     x_a_la_n = 1.0
     for i in range(1,n):
-        x_x_la_n *= x
+        x_a_la_n *= x
         factorial *= float(i)
-        s=1.0/factorial
+        s = 1.0/factorial
         exponencial_de_x += s*x_a_la_n
     return exponencial_de_x
 
@@ -31,13 +31,13 @@ def exponencial_pro(n:int=150,x:float=1.0):
     if x<0:
         flag=True
         x = -x
-        s = 1.0
+    s = 1.0
     for i in range(n,0,-1):
-        s *= x/float(i)
-        s += 1.0
+       s *= x/float(i)
+       s += 1.0
 
     if flag == True:
-     s=1/s
+       s=1/s
     return s
 
 m=400
