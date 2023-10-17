@@ -52,7 +52,7 @@ class Persona:
 
      def ImprimirInfo(self) -> None:
          print(f"--- Mi nombre es {self.nombres} {self.apellidos}, tengo {self.edad} años de edad, vivo en {self.direccion} ")
-         self.Computadora.ImprimirInfoPc()
+         self.Computadora.imprimirInfoPc()
 
      #==== Destructor ====
 
