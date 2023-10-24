@@ -16,7 +16,7 @@ class BaseDeDatos(RepositorioDeUsuarios):
     __user: str
     __password: str
 
-    def __init__(mi, host:str, user:str, pasword:str):
+    def __init__(mi, host:str, user:str, password:str):
         mi.__host = host
         mi.__user = user
         mi.__password = password
@@ -29,7 +29,7 @@ class BaseDeDatos(RepositorioDeUsuarios):
                         "apellidos": usuario.getApellidos(),
                         "edad": usuario.getEdad() }
         print(f"guardando el usuario en la base de datos {usuario.getNombre()}\n")
-        print(f"INSERTAR DATOS DEL USUARIO ('{userElements['nombre']}','{userElements['apellidos']}',{userElements[édad]})")
+        print(f"INSERTAR DATOS DEL USUARIO ('{userElements['nombre']}','{userElements['apellidos']}',{userElements['edad']})")
 
     def cerrar(mi) -> None:
         print("Cerrando conexion")

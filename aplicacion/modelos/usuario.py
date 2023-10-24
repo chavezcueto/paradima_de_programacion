@@ -24,7 +24,7 @@ class Usuario:
 
     def getNombre(mi) -> str:
         return mi.__nombre
-    def getapellidos(mi) -> str:
+    def getApellidos(mi) -> str:
         return mi.__apellidos
-    def getedad(mi) -> int:
+    def getEdad(mi) -> int:
         return mi.__edad

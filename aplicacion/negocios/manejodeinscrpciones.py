@@ -7,11 +7,11 @@
 #==============================
 
 from aplicacion.modelos.usuario import Usuario
-from aplicacion.repositorio.repositoriousurios import RepositoriosDeUsuarios
+from aplicacion.repositorio.repositoriodeusuarios import RepositorioDeUsuarios
 
 #==== Clsase ManejoDeInscripciones (NO TIENE VARIABLES) ====
 
-class ManejoDeInscrpciones:
+class ManejoDeInscripciones:
 
     # Decorado staticmethod
     # el objeto solo tiene la funcion inscribirUsuario
@@ -19,7 +19,7 @@ class ManejoDeInscrpciones:
     # el obejto ManejoDeInscripciones el al interface intercambiable
 
     @staticmethod
-    def inscribirUsuario(usuario: Uusuario, repositorioDeUsuarios: RepositorioDeUsuarios) -> None:
+    def inscribirUsuario(usuario: Usuario, repositorioDeUsuarios: RepositorioDeUsuarios) -> None:
         print("----> Guardando Usuario ... \n")
         repositorioDeUsuarios.abrir()
         repositorioDeUsuarios.guardar(usuario)

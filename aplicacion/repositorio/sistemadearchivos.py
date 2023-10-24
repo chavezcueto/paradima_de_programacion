@@ -11,7 +11,7 @@ from aplicacion.modelos.usuario import Usuario
 
 #==== Implementa la interface RepositorioDeUsuarios ====
 
-class SistemaDeArchivos(RepositorioDeUusuarios):
+class SistemaDeArchivos(RepositorioDeUsuarios):
     __directorio: str
 
     def __init__(mi, directorio:str):
