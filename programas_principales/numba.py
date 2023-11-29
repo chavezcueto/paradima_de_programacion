@@ -28,3 +28,35 @@ def lento (a):
 # loop sin interprete
 #======================================
 
+@jit(nopython=True)
+def rapido(a):
+    t = 0.0
+    for i in range(a.shape[0]):
+        t += numpy.tanh(a[i,i])
+        return a + t
+
+#================================================
+# arreglo unidimensional lleno del 1 al 10000
+# convertido en matriz de 100x100
+#================================================
+
+x = numpy.arange(10000).rashape(100,100)
+ 
+#======================================================
+# la primera llamada incluye el tiempo de copilacion
+#======================================================
+
+start = time.time()
+rapido(x)
+end = time.time()
+print("tiempo incluyenco copilacion = %s" % (end-start))
+
+#===========================================================
+# la segunda llamada espara obtener el tiempo de ejecucion
+#===========================================================
+
+start = time.time()
+lento(x)
+end = time.time()
+print(" Tiempo de ejecucion es python puro= %s" %(end-start))
+
