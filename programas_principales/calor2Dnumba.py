@@ -3,7 +3,7 @@
 #==============================
 # Matemática Algorítmica
 # Paradigmas de Programación
-# ESFM IPN   Noviembre 2023
+# ESFM IPN   Diciembre 2023
 #==============================
 
 #=================================================
@@ -14,9 +14,9 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 import time
-
+from numba import jit
 #=====================================
-# parametros que se pueden cambiar
+# parametros que se pueden cambiar (Parametros de entrada)
 #=====================================
 
 # numero de celdas
@@ -53,8 +53,9 @@ un = np.zeros(nt,dtype=np.float64) # arreglo de escritura
 #==============================================================
 # evolucion temporal de la ecucion diferencial parcial
 # u_t = k*laplaciano(u) (ecucion de difunsion de calor)
+# FUncion sin interprete de python
 #==============================================================
-
+Qjit(nopython=True)
 def evolucion(u,n,udx2,dt,i,k):
     jpl = i + n[0]
     jml = i - n[0]
@@ -66,8 +67,9 @@ def evolucion(u,n,udx2,dt,i,k):
 #==================================================================
 # loop sobre toda la malla para avanzar la ecucion en el tiempo 
 # no contien la frontera (u=0 en toda la orilla del dominio)
+# loop acelerado sin interprete de python
 #==================================================================
-
+@jit(nopython=True)
 def solucion(u,un,udx2,dt,n,k):
     for jj in range(1,n[1]-1):
         for ii in range(1,n[0]-1):
@@ -114,9 +116,9 @@ print("Tardo: ", end-start,"s")
 # Grafico de la solucion al tiempo final
 #=============================================
 
-u = np.reshape(u,(n[0],n[1]))
 x,y = np.meshgrid(np.arange(0,L[0],dx[0]),np.arange(0,L[1],dx[1]))
 ax = plt.axes(projection="3d")
+up = np.reshape(u,(n[0],n[1]))
 ax.plot_surface(x,y,u,cmap=cm.hsv)
 plt.show()
 
