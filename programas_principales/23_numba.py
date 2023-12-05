@@ -20,7 +20,7 @@ import time
 def lento (a):
     t = 0.0
     # para cada renglon
-    for i in range (a.shapen[0]):
+    for i in range (a.shape[0]):
         t += numpy.tanh(a[i,i])
         return a + t
 
@@ -40,7 +40,7 @@ def rapido(a):
 # convertido en matriz de 100x100
 #================================================
 
-x = numpy.arange(10000).rashape(100,100)
+x = numpy.arange(10000).reshape(100,100)
  
 #======================================================
 # la primera llamada incluye el tiempo de copilacion
@@ -58,5 +58,5 @@ print("tiempo incluyenco copilacion = %s" % (end-start))
 start = time.time()
 lento(x)
 end = time.time()
-print(" Tiempo de ejecucion es python puro= %s" %(end-start))
+print("Tiempo de ejecucion es python puro= %s" %(end-start))
 

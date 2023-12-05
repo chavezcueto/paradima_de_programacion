@@ -55,7 +55,7 @@ un = np.zeros(nt,dtype=np.float64) # arreglo de escritura
 # u_t = k*laplaciano(u) (ecucion de difunsion de calor)
 # FUncion sin interprete de python
 #==============================================================
-Qjit(nopython=True)
+@jit(nopython=True)
 def evolucion(u,n,udx2,dt,i,k):
     jpl = i + n[0]
     jml = i - n[0]
@@ -119,6 +119,6 @@ print("Tardo: ", end-start,"s")
 x,y = np.meshgrid(np.arange(0,L[0],dx[0]),np.arange(0,L[1],dx[1]))
 ax = plt.axes(projection="3d")
 up = np.reshape(u,(n[0],n[1]))
-ax.plot_surface(x,y,u,cmap=cm.hsv)
+ax.plot_surface(x,y,up,cmap=cm.hsv)
 plt.show()
 
