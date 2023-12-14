@@ -16,7 +16,7 @@ comunicadores = MPI.COMM_WORLD
 n_procesos = comunicadores.Get_size()
 
 # identificador de este proceso
-quien soy = comunicadores.Get_rank()
+quien_soy = comunicadores.Get_rank()
 
 print("saludos desde el proceso ", str(quien_soy), "de ", str(n_procesos))
 
